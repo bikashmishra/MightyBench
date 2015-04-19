@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xml:lang="en" lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Form</title>
+</head>
+<body>
+<form action="{% url 'startusup:signup' %}" method="post"  class="form">
+{% csrf_token %}
+</p>
+
+        <p class="row">
+          <label for="first-name">Your first name: <span class="required"></span></label>
+          <input type="text" id="first-name" name="firstname" class="field-large" required="required" aria-required="true" style="cursor: auto">
+ </p>
+        <p class="row">
+          <label for="last-name">Your last name:</label>
+          <input type="text" id="last-name" name="lastname" class="field-large">
+</p>
+ 
+        <p class="row">
+
+        <label for="role">Your Role<span class="required"></span></label>
+          <select name="hclass">
+            <option value="hacker">Hacker</option>
+            <option value="hustler">Hustler</option>
+            <option value="hipster">Hipster</option>
+            <option value="idea">Honcho</option>
+          </select>
+        <p class="row">
+Skills
+<input type="checkbox" name="skills" value="HTML">HTML
+<input type="checkbox" name="skills" value="CSS">CSS
+<input type="checkbox" name="skills" value="JavaScript">JavaScript
+<input type="checkbox" name="skills" value="PHP">PHP
+<input type="checkbox" name="skills" value="Java">Java
+<input type="checkbox" name="skills" value="C">C
+<input type="checkbox" name="skills" value="C++">C++
+<input type="checkbox" name="skills" value="Python">Python
+<input type="checkbox" name="skills" value="Ruby">Ruby
+<input type="checkbox" name="skills" value="Other">Other
+            <textarea  id="other" name="other" cols="60" rows="3" maxlength="30">  </textarea>
+</p>
+        <p class="row">
+          <label for="github">Github Link</label>
+          <input type="text" id="github" name="githublink" size="40"/>
+        </p>
+                <p class="row">
+          <label for="linkedin">LinkedIn Link</label>
+          <input type="text" id="linkedin" name="linkedinlink" size="40"/>
+        </p>
+                <p class="row">
+          <label for="dribble">Dribble Link</label>
+          <input type="text" id="dribble" name="dribblelink" size="40"/>
+        </p>
+        <p class="row">
+          <label for="email">Email Link</label>
+          <input type="text" id="email" name="email" size="40"/>
+        </p>
+    </fieldset>
+    <input type="submit" value="Signup" class="btn">
+  </form>
+</body>
+</html>
